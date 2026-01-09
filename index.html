@@ -5,14 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PlayWatch – Gry i Zagadki</title>
 <link rel="stylesheet" href="style.css">
+
 <!-- Google AdSense -->
-<!-- <script data-ad-client="ca-pub-9599322707323836" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+<!-- Wklej swój kod AdSense tutaj -->
+<!-- <script data-ad-client="ca-pub-XXXXXX" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+
 </head>
 <body>
 
 <header>
   <h1>🎮 PlayWatch</h1>
-  <p>Najlepsze gry, zagadki i zabawa online – zdobywaj punkty i baw się godzinami!</p>
+  <p>Profesjonalne gry i zabawa online</p>
 </header>
 
 <section class="points-section">
@@ -22,14 +25,16 @@
 
 <section class="about-section">
   <h2>O stronie</h2>
-  <p>PlayWatch to platforma rozrywkowa online, w której możesz grać w gry 2D i 3D, rozwiązywać zagadki oraz zdobywać punkty. Punkty możesz wykorzystać w przyszłych funkcjach, np. awatary, skiny czy bonusy!</p>
+  <p>PlayWatch to rozrywka online z mini-grami i profesjonalnymi grami 2D i 3D. Za każdą akcję w grze zdobywasz punkty!</p>
 </section>
 
+<!-- MINI-GRY -->
 <section class="mini-games">
-  <h2>Mini gry</h2>
+  <h2>🧩 Mini Gry</h2>
 
-  <div class="game-section">
-    <h3>🧩 Zagadki</h3>
+  <!-- Gra 1: Zagadki -->
+  <div class="game">
+    <h3>Gra 1 – Zagadki</h3>
     <p id="riddleText">Kliknij "Nowa zagadka", aby wylosować zagadkę</p>
     <input type="text" id="riddleAnswer" placeholder="Twoja odpowiedź">
     <button onclick="sprawdzZagadke()">Sprawdź odpowiedź</button>
@@ -37,39 +42,46 @@
     <p id="riddleResult"></p>
   </div>
 
-  <div class="game-section">
-    <h3>🖱️ Klikacz</h3>
-    <p>Kliknięcia: <strong><span id="clicks">0</span></strong></p>
+  <!-- Gra 2: Klikacz -->
+  <div class="game">
+    <h3>Gra 2 – Klikacz</h3>
+    <p>Kliknięcia: <span id="clicks">0</span></p>
     <button onclick="klik()">Kliknij mnie</button>
   </div>
 
-  <div class="game-section">
-    <h3>🎲 Losowa liczba</h3>
-    <p>Liczba: <strong><span id="number">?</span></strong></p>
+  <!-- Gra 3: Losowa liczba -->
+  <div class="game">
+    <h3>Gra 3 – Losowa liczba</h3>
+    <p>Liczba: <span id="number">?</span></p>
     <button onclick="losuj()">Losuj 1–100</button>
   </div>
 </section>
 
-<section class="full-games">
-  <h2>Pełne gry</h2>
-  <ul>
-    <li><a href="gry2d.html">🎮 Strzelanka 2D – pełna wersja</a></li>
-    <li><a href="fps3d.html">🔫 FPS 3D – pełna wersja</a></li>
-    <li><a href="zagadki.html">🧩 Zagadki – podstrona z zagadkami</a></li>
-  </ul>
-</section>
+<!-- PROFESJONALNE GRY -->
+<section class="pro-games">
+  <h2>🔥 Profesjonalne gry</h2>
 
-<section class="adsense">
-  <h2>Reklama</h2>
-  <!-- Tutaj wklej kod z Google AdSense -->
+  <div class="game-link">
+    <h3>Strzelanka 2D</h3>
+    <p>Profesjonalna gra 2D z wrogami, strzałami i punktami.</p>
+    <a href="gry2d.html">▶️ Zagraj teraz</a>
+  </div>
+
+  <div class="game-link">
+    <h3>FPS 3D (CS Style)</h3>
+    <p>Profesjonalny FPS 3D z botami, kolizjami, strzałami i punktacją.</p>
+    <a href="fps3d.html">▶️ Zagraj teraz</a>
+  </div>
 </section>
 
 <footer>
-  <a href="regulamin.html">Regulamin</a> |
-  <a href="polityka-prywatnosci.html">Polityka prywatności</a> |
+  <a href="regulamin.html">Regulamin</a> | 
+  <a href="polityka-prywatnosci.html">Polityka prywatności</a> | 
   <a href="kontakt.html">Kontakt</a>
 </footer>
 
+<!-- Skrypty -->
 <script src="script.js"></script>
+
 </body>
 </html>
