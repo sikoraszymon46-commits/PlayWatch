@@ -25,7 +25,6 @@
   <p>PlayWatch to platforma rozrywkowa online, w której możesz grać w gry 2D i 3D, rozwiązywać zagadki oraz zdobywać punkty. Punkty możesz wykorzystać w przyszłych funkcjach, np. awatary, skiny czy bonusy!</p>
 </section>
 
-<!-- Mini gry na stronie głównej -->
 <section class="mini-games">
   <h2>Mini gry</h2>
 
@@ -51,7 +50,6 @@
   </div>
 </section>
 
-<!-- Pełne gry podstrony -->
 <section class="full-games">
   <h2>Pełne gry</h2>
   <ul>
@@ -61,7 +59,6 @@
   </ul>
 </section>
 
-<!-- Reklama AdSense -->
 <section class="adsense">
   <h2>Reklama</h2>
   <!-- Tutaj wklej kod z Google AdSense -->
@@ -74,51 +71,5 @@
 </footer>
 
 <script src="script.js"></script>
-<script>
-// Przykład prostych mini-gier na stronie głównej
-let clicks = 0;
-function klik() {
-  clicks++;
-  document.getElementById("clicks").textContent = clicks;
-  addPoints(1);
-}
-
-function losuj() {
-  let liczba = Math.floor(Math.random()*100)+1;
-  document.getElementById("number").textContent = liczba;
-  addPoints(5);
-}
-
-// Zagadki
-const zagadki = [
-  {q:"Co zawsze rośnie ale nigdy nie spada?", a:"wiek"},
-  {q:"Co ma klucze ale nie może otworzyć drzwi?", a:"pianino"},
-  {q:"Co można złamać ale nie można dotknąć?", a:"obietnica"},
-  {q:"Co ma wiele twarzy ale nie ma oczu?", a:"moneta"},
-  {q:"Co jest twoje, a inni używają tego częściej niż ty?", a:"imię"}
-];
-
-let obecnaZagadka;
-function losujZagadke() {
-  obecnaZagadka = zagadki[Math.floor(Math.random()*zagadki.length)];
-  document.getElementById("riddleText").textContent = obecnaZagadka.q;
-  document.getElementById("riddleAnswer").value = "";
-  document.getElementById("riddleResult").textContent = "";
-}
-
-function sprawdzZagadke() {
-  let odp = document.getElementById("riddleAnswer").value.toLowerCase().trim();
-  if(odp === obecnaZagadka.a) {
-    document.getElementById("riddleResult").textContent = "Brawo! +10 punktów";
-    addPoints(10);
-    losujZagadke();
-  } else {
-    document.getElementById("riddleResult").textContent = "Spróbuj ponownie!";
-  }
-}
-
-document.addEventListener("DOMContentLoaded", ()=>{losujZagadke()});
-</script>
-
 </body>
 </html>
