@@ -1,0 +1,7 @@
+body{font-family:sans-serif;background:#f0f0f0;margin:0;padding:0}
+header{text-align:center;background:#4CAF50;color:white;padding:1em}
+section{margin:1em;padding:1em;background:white;border-radius:10px;box-shadow:0 0 5px rgba(0,0,0,0.2)}
+button{padding:0.5em 1em;margin:0.5em;background:#4CAF50;color:white;border:none;border-radius:5px;cursor:pointer}
+button:hover{background:#45a049}
+input{padding:0.5em;margin:0.5em;border:1px solid #ccc;border-radius:5px}
+footer{text-align:center;padding:1em;background:#ddd;margin-top:1em}
