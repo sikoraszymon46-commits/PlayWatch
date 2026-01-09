@@ -5,85 +5,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PlayWatch – Gry i Zagadki</title>
 <link rel="stylesheet" href="style.css">
-
-<!-- Google AdSense -->
-<!-- Wklej swój kod AdSense tutaj -->
-<!-- <script data-ad-client="ca-pub-XXXXXXX" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
-
-<!-- Google Search Console -->
-<!-- <meta name="google-site-verification" content="TU_WKLEJ_SWÓJ_KOD"> -->
-
+<!-- AdSense -->
+<!-- <script data-ad-client="ca-pub-9599322707323836" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
 </head>
 <body>
 
 <header>
   <h1>🎮 PlayWatch</h1>
-  <p>Profesjonalne gry online – mini-gry i strzelanki</p>
+  <p>Proste gry, zagadki i FPS 3D w przeglądarce</p>
+  <p>Twoje punkty: <strong><span id="totalPoints">0</span></strong></p>
 </header>
 
-<section class="points-section">
-  <h2>⭐ Twoje punkty</h2>
-  <p>Łączna liczba punktów: <strong><span id="totalPoints">0</span></strong></p>
-</section>
+<main>
+  <section class="game-section">
+    <h2>🧩 Mini gry</h2>
+    <p><a href="gry.html">Kliknij, aby zagrać w mini gry</a></p>
+  </section>
 
-<section class="about-section">
-  <h2>O stronie</h2>
-  <p>PlayWatch oferuje mini-gry, strzelankę 2D oraz FPS 3D. Za każdą akcję w grze zdobywasz punkty, które mogą być wymieniane w przyszłości na bonusy lub awatary.</p>
-</section>
-
-<!-- MINI-GRY -->
-<section class="mini-games">
-  <h2>🧩 Mini Gry</h2>
-
-  <!-- Gra 1: Zagadki -->
-  <div class="game">
-    <h3>Gra 1 – Zagadki</h3>
-    <p id="riddleText">Kliknij "Nowa zagadka", aby wylosować zagadkę</p>
-    <input type="text" id="riddleAnswer" placeholder="Twoja odpowiedź">
-    <button onclick="sprawdzZagadke()">Sprawdź odpowiedź</button>
-    <button onclick="losujZagadke()">Nowa zagadka</button>
-    <p id="riddleResult"></p>
-  </div>
-
-  <!-- Gra 2: Klikacz -->
-  <div class="game">
-    <h3>Gra 2 – Klikacz</h3>
-    <p>Kliknięcia: <span id="clicks">0</span></p>
-    <button onclick="klik()">Kliknij mnie</button>
-  </div>
-
-  <!-- Gra 3: Losowa liczba -->
-  <div class="game">
-    <h3>Gra 3 – Losowa liczba</h3>
-    <p>Liczba: <span id="number">?</span></p>
-    <button onclick="losuj()">Losuj 1–100</button>
-  </div>
-</section>
-
-<!-- PROFESJONALNE GRY -->
-<section class="pro-games">
-  <h2>🔥 Profesjonalne gry</h2>
-
-  <div class="game-link">
-    <h3>Strzelanka 2D</h3>
-    <p>Profesjonalna gra 2D z wrogami, strzałami i punktami.</p>
-    <a href="gry2d.html">▶️ Zagraj teraz</a>
-  </div>
-
-  <div class="game-link">
-    <h3>FPS 3D (CS Style)</h3>
-    <p>Profesjonalny FPS 3D z botami, mapami, kolizjami i strzałami.</p>
-    <a href="fps3d.html">▶️ Zagraj teraz</a>
-  </div>
-</section>
+  <section class="game-section">
+    <h2>⚡ FPS 3D</h2>
+    <p><a href="fps3d.html">Zagraj w FPS 3D – boty, strzały, punkty</a></p>
+  </section>
+</main>
 
 <footer>
-  <a href="regulamin.html">Regulamin</a> | 
-  <a href="polityka-prywatnosci.html">Polityka prywatności</a> | 
+  <a href="regulamin.html">Regulamin</a>
+  <a href="polityka-prywatnosci.html">Polityka prywatności</a>
   <a href="kontakt.html">Kontakt</a>
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
