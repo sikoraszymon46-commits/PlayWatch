@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PlayWatch – Gry i Zagadki 3D</title>
+<link rel="stylesheet" href="style.css">
+<!-- Miejsce na AdSense -->
+<!-- <script data-ad-client="ca-pub-TWOJE_ID_ADSENSE" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+<!-- Miejsce na Google Search Console -->
+<!-- <meta name="google-site-verification" content="TWOJ_KOD_WERYFIKACYJNY"> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+<header>
+  <h1>🎮 PlayWatch</h1>
+  <p>Proste gry, zagadki i zabawa online</p>
+</header>
+
+<section class="points-section">
+  <h2>⭐ Twoje punkty</h2>
+  <p>Łączna liczba punktów: <strong><span id="totalPoints">0</span></strong></p>
+</section>
+
+<section class="about-section">
+<h2>O stronie</h2>
+<p>PlayWatch to strona rozrywkowa z prostymi grami i zagadkami. Działa na telefonach i komputerach bez instalowania aplikacji. Za każde poprawne rozwiązanie lub akcję w grze zdobywasz punkty!</p>
+</section>
+
+<!-- GRA 1: Zagadki -->
+<section class="game-section">
+<h2>🧩 Gra 1 – Zagadki</h2>
+<div class="game">
+<p id="riddleText">Kliknij "Nowa zagadka", aby wylosować zagadkę</p>
+<input type="text" id="riddleAnswer" placeholder="Twoja odpowiedź">
+<button onclick="sprawdzZagadke()">Sprawdź odpowiedź</button>
+<button onclick="losujZagadke()">Nowa zagadka</button>
+<p id="riddleResult"></p>
+</div>
+</section>
+
+<!-- GRA 2: Klikacz -->
+<section class="game-section">
+<h2>🖱️ Gra 2 – Klikacz</h2>
+<div class="game">
+<p>Kliknięcia: <strong><span id="clicks">0</span></strong></p>
+<button onclick="klik()">Kliknij mnie</button>
+</div>
+</section>
+
+<!-- GRA 3: Losowa liczba -->
+<section class="game-section">
+<h2>🎲 Gra 3 – Losowa liczba</h2>
+<div class="game">
+<p>Liczba: <strong><span id="number">?</span></strong></p>
+<button onclick="losuj()">Losuj 1–100</button>
+</div>
+</section>
+
+<!-- GRA 4: Szybkie kliknięcia -->
+<section class="game-section">
+<h2>⚡ Gra 4 – Szybkie kliknięcia</h2>
+<div class="game">
+<p>Kliknij 5 razy jak najszybciej!</p>
+<button id="fastClickBtn">Kliknij mnie</button>
+<p>Twoje kliknięcia: <span id="fastClicks">0</span></p>
+</div>
+</section>
+
+<!-- GRA 5: Losowa karta -->
+<section class="game-section">
+<h2>🎴 Gra 5 – Losowa karta</h2>
+<div class="game">
+<p>Karta: <span id="card">?</span></p>
+<button onclick="losujKarte()">Losuj kartę</button>
+</div>
+</section>
+
+<!-- GRA 6: Odgadnij liczbę -->
+<section class="game-section">
+<h2>🎯 Gra 6 – Odgadnij liczbę</h2>
+<div class="game">
+<p>Wpisz liczbę 1–10:</p>
+<input type="number" id="guessNumber" min="1" max="10">
+<button onclick="sprawdzLiczbe()">Sprawdź</button>
+<p id="guessResult"></p>
+</div>
+</section>
+
+<!-- GRA 7: Strzelanka 2D -->
+<section class="game-section">
+<h2>🔫 Gra 7 – Strzelanka 2D</h2>
+<canvas id="shootGame" width="400" height="300" style="border:1px solid #000;"></canvas>
+<p>Twoje trafienia: <span id="shootHits">0</span></p>
+</section>
+
+<!-- GRA 8: FPS 3D -->
+<section class="game-section">
+<h2>🔫 Gra 8 – FPS 3D (Demo)</h2>
+<div id="fps3d" style="width:600px;height:400px;"></div>
+<p>Twoje trafienia: <span id="fpsHits">0</span></p>
+</section>
+
+<footer>
+<a href="regulamin.html">Regulamin</a>
+<a href="polityka-prywatnosci.html">Polityka prywatności</a>
+<a href="kontakt.html">Kontakt</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
