@@ -5,19 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FPS 3D – PlayWatch</title>
 <link rel="stylesheet" href="style.css">
-<script src="https://cdn.jsdelivr.net/npm/three@0.155.0/build/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.155.0/examples/js/controls/PointerLockControls.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r150/three.min.js"></script>
 </head>
 <body>
-
 <header>
-<h1>🔫 FPS 3D – CS Style</h1>
-<a href="index.html">⬅️ Powrót</a>
+  <h1>FPS 3D – PlayWatch</h1>
+  <p>Punkty: <span id="fpsPoints">0</span></p>
 </header>
 
-<div id="fps-container" style="width:100%; height:600px;"></div>
-<p>Punkty: <span id="points3D">0</span></p>
+<div id="gameContainer" style="width:100%;height:80vh;"></div>
 
-<script src="script3d_full.js"></script>
+<footer>
+  <a href="index.html">🏠 Strona główna</a>
+</footer>
+
+<script src="script3d.js"></script>
 </body>
 </html>
