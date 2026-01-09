@@ -1,17 +1,125 @@
+/* --- Reset i podstawy --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin:0;
-    padding:0;
-    background: #f5f5f5;
+  font-family: 'Arial', sans-serif;
+  background-color: #1e1e1e;
+  color: #fff;
+  overflow: hidden;
 }
+
 header {
-    background: #2c3e50;
-    color:white;
-    padding:20px;
-    text-align:center;
+  width: 100%;
+  padding: 15px 0;
+  background: linear-gradient(90deg, #0f0c29, #302b63, #24243e);
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
-h1, h2, h3 { margin:10px 0; }
-.game-section { background:#ecf0f1; margin:10px; padding:10px; border-radius:5px; }
-button { padding:10px; margin:5px; cursor:pointer; }
-footer { background:#2c3e50; color:white; text-align:center; padding:10px; }
-footer a { color:white; margin:0 5px; text-decoration:none; }
+
+header h1 {
+  font-size: 2rem;
+  color: #f1c40f;
+  text-shadow: 2px 2px 5px #000;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #ecf0f1;
+}
+
+/* --- Game container --- */
+#gameContainer {
+  width: 100%;
+  height: calc(100vh - 120px);
+  display: block;
+  background-color: #111;
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #333;
+}
+
+/* --- Footer --- */
+footer {
+  width: 100%;
+  padding: 10px 0;
+  background: linear-gradient(90deg, #24243e, #302b63, #0f0c29);
+  text-align: center;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.5);
+}
+
+footer a {
+  color: #f1c40f;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* --- Punkty gracza --- */
+#fpsPoints {
+  font-size: 1.5rem;
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+/* --- Buttons --- */
+button {
+  background: #f1c40f;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #1e1e1e;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #e1b507;
+  transform: scale(1.05);
+}
+
+/* --- Input fields --- */
+input[type="text"], input[type="number"] {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #333;
+  margin: 5px 0;
+}
+
+/* --- Dodatkowe style dla HUD gry --- */
+.hud {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0,0,0,0.6);
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #000;
+}
+
+.hud p {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #f39c12;
+}
+
+/* --- Animacje --- */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+button:active {
+  animation: pulse 0.2s ease-in-out;
+}
